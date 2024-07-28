@@ -30,7 +30,7 @@
       </div>
       <div class="col-md-7 p-0 offset-md-1 business-content">
           <form [formGroup]="businessForm" (ngSubmit)="onSubmit()" class="row  mx-sm-auto mx-md-0">
-            <div class="back mb-4 px-0">
+            <div class="back mb-2 px-0">
                 <button class="btn mx-0 p-0" (click)="clearAuth()" routerLink="'/registration'" >
                     <i class="pi pi-arrow-left"></i>
                 </button>
@@ -184,7 +184,7 @@
                     } 
                 </div>
                 <div class="form-group d-flex flex-column col-md-5 offset-md-2 px-0 ">
-                    <label for="Are">Are you currently using system ?
+                    <label for="Are" class="text-nowrap">Are you currently using system ?
                         <span class="question " tooltipPosition="top" [pTooltip]="tooltipContent" 
                          >
                             <i class="pi pi-question"></i>
@@ -220,7 +220,7 @@
                 </div>
              
           
-          <div class="col-md-12 px-0 d-flex justify-content-md-end ">
+          <div class="col-md-12 px-0 d-flex justify-content-md-end  mb-md-3">
             <button pButton type="submit"  class="btn  btn-submit d-flex justify-content-between px-3 align-items-center gap-1">
                 CREATE ACCOUNT
                 <i class="pi pi-arrow-right "></i>

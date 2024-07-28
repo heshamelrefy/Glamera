@@ -19,8 +19,8 @@ $error:#F3446C;
 {
     background-color: #FFFFFF;
     position: absolute;
-    bottom: 100px;
-    left: 224px;
+    bottom: 75px;
+    left: 160px;
     border-radius: 16px 16px 57px 16px;
     padding: 25px;
     width: 368px;
@@ -43,13 +43,13 @@ $error:#F3446C;
 .desc-icon
 {
     position: absolute;
-    bottom: 230px;
-    left: 183px;
+    bottom: 205px;
+    left: 120px;
 }
 
 .business-content
 {
-    margin-top: 115px !important;
+    margin-top: 100px !important;
     p{
         color: $color2;
         letter-spacing: 0px;
@@ -152,13 +152,13 @@ input.ng-invalid.ng-touched
 }
 
 :host ::ng-deep .p-galleria-indicator-onitem.p-galleria-indicators-bottom .p-galleria-indicators {
-    bottom: -200px !important;
-    left: 385px !important;
+    bottom: -190px !important;
+    left: 340px !important;
     width: 100px !important;
 }
 :host ::ng-deep .p-galleria-item-container
 {
-    height: 550px !important;
+    height: 500px !important;
 }
 @media (min-width:350px) and (max-width:1100px) {
     .desc
