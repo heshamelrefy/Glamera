@@ -1,10 +1,53 @@
 # Glamera
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+This project  is Choose business and characterized by speed, flexibility and easy to use.
+This project  is responsive.
 
-## Development server
+## Project components(standalone),interfaces,Guard,services
+# Core  
+  - authorizedGuard
+  - unauthorizedGuard
+  - verificationGuard
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Components 
+  - Registration
+  - Business information
+  - Verification code
+  - Created successfully
+    
+
+  # Shared Components 
+  - Help Header Component
+  - SVG Component
+
+ # Services 
+  - Form Data Service
+
+
+# Interfaces 
+  - Register Form
+  - Business Form
+  - Verify Form
+
+
+# routers
+  - appRouts.ts
+##  Stacks
+
+  - Html5
+  - Sass 
+  - primeicon
+  - primeng
+  - Bootstrap
+  - Typescript 
+  - Angular18
+
+## to run project install
+
+  1- npm install
+  2- ng serve
+
 
 ## Code scaffolding
 
