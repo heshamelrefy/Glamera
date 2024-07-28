@@ -45,8 +45,8 @@ This project  is responsive.
 
 ## to run project install
 
-  1- npm install
-  2- ng serve
+  - npm install
+  - ng serve
 
 
 ## Code scaffolding
