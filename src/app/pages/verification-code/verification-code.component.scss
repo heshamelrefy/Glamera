@@ -1,0 +1,62 @@
+$color1:#635CA8;
+$color2:#454C66;
+$color3:#747A88;
+$color4:#A59BE0;
+$color5:#6AC7BB;
+$border-input:#B4ACE5;
+$error:#F3446C;
+.verify-header
+{
+    span{
+        color: $color2;
+        font: normal normal 600 24px/24px Poppins;
+        text-transform: capitalize;
+    }
+}
+.verify-pragragph
+{
+    font: normal normal normal 16px/28px Poppins;
+    text-align: center;
+    color: $color3;
+}
+.resend-code
+{
+    color: $color3;
+    font: normal normal medium 14px/24px Poppins;
+    letter-spacing: 0px;
+    .time-number
+    {
+        color: $color5;
+        font: normal normal 600 16px/24px Poppins;
+    }
+}
+.btn-verify
+{
+    button{
+        &:hover
+        {
+            background-color: #554f87;
+        }
+        color: #ffffff;
+        background-color: $color1;
+        width: 176px;
+        height: 48px;
+        border-radius: 4px;
+    }
+}
+
+small 
+{
+    font-size: 13px;
+    color: $error;
+}
+
+:host::ng-deep.p-inputotp-input
+{
+    width: 88px !important;
+}
+:host::ng-deep.p-inputotp-input:focus
+{
+    border: 1px solid $color4 !important;
+    box-shadow: none;
+}

@@ -1,0 +1,33 @@
+<div class="verify-content ">
+    <div class="verify-img text-center mb-4">
+        <img src="images/verify.png" alt="box" >
+    </div>
+    <div class="verify-header text-center">
+        <span >
+            Verification Code
+        </span>
+
+    </div>
+    <p class="verify-pragragph my-4">
+        Please enter the verification code sent to your <br>
+        phone number ** {{''+this.formDataService.form.controls['registerForm'].value.phone | slice:-2}}
+    </p>
+    <form [formGroup]="verifyForm" class="text-center" (ngSubmit)="onSubmit()">
+        <div class="my-4 d-flex justify-content-center">
+            <p-inputOtp [(ngModel)]="verifyForm.controls.otp.value"
+            [ngModelOptions]="{standalone: true}"
+            [integerOnly]="true"  />
+        </div>
+        @if (f.otp.touched && f.isVerified.invalid) {
+            <small class="text-danger mt-2">In-valid Code</small>
+        }
+        <p class="resend-code">
+            The code will be sent again within <span class="time-number">{{remainingTime}}</span> seconds
+        </p>
+        <div class="btn-verify my-4">
+            <button [disabled]="remainingTime == 0" type="submit" class="btn">
+                VERIFY
+            </button>
+        </div>
+    </form>
+</div>

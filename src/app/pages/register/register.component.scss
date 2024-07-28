@@ -1,0 +1,175 @@
+$color1:#635CA8;
+$color2:#454C66;
+$color3:#747A88;
+$color4:#3482F4;
+$color5:#383838;
+$border-input:#B4ACE5;
+$error:#F3446C;
+
+.image
+{
+    background-image: url("../../../../assets/images/left-image.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    // background-color: #464646;
+}
+.desc
+{
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: 100px;
+    left: 224px;
+    border-radius: 16px 16px 57px 16px;
+    padding: 25px;
+    width: 368px;
+    height: 170px;
+    p{
+        color: $color5;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+    h5{
+        color: $color5;
+        font-size: 16px;
+    }
+    span{
+        font-size: 12px;
+        color: $color5;
+        opacity: 0.5;
+    }
+}
+.desc-icon
+{
+    position: absolute;
+    bottom: 230px;
+    left: 183px;
+}
+
+.business-content
+{
+    margin-top: 115px !important;
+    p{
+        color: $color2;
+        letter-spacing: 0px;
+        font-weight: 900;
+        font-size: 24px;
+    }
+    small 
+    {
+        font-size: 10px;
+        color: $error;
+        span{
+        font-size: 10px;
+        color: $error;
+        }
+    }
+    .terms
+    {
+        color: $color2;
+        opacity: .9;
+    }
+    span{
+        color: $color3;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    label
+    {
+        color: $color2;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    .form-group
+    {
+        margin-bottom: 30px !important;
+        
+    }
+    a{
+        color: $color4 !important;
+        cursor: pointer;
+    }
+    .btn-submit
+    {
+        &:hover
+        {
+            background-color: #554f87;
+        }
+        width: 144px;
+        background-color: $color1;
+        font-size: 14px;
+        color: #fff;
+    }
+
+    
+}
+input {
+    width: 85% !important;
+    height: 48px !important;
+    &:focus{
+        border: 1px solid $border-input !important;
+        box-shadow: none !important;
+    }
+}
+input.ng-invalid.ng-touched
+{
+    border: 1px solid $error !important;
+}
+:host ::ng-deep .p-password,.p-inputgroup
+{
+        width: 85% !important;
+        box-shadow: none !important;
+        height: 48px !important;
+}
+:host ::ng-deep .p-password-input:focus
+{
+
+    border: 1px solid $border-input !important;
+}
+:host ::ng-deep.p-inputnumber-input:focus
+{
+
+    border: 1px solid $border-input !important;
+}
+:host ::ng-deep .p-inputnumber-input
+{
+
+    box-shadow: none !important;
+}
+:host ::ng-deep .p-password-input
+{
+        width: 100% !important;
+        box-shadow: none !important;
+        height: 48px !important;
+
+}
+
+:host ::ng-deep .p-galleria.p-galleria-indicator-onitem .p-galleria-indicators
+{
+    background-color: unset !important;
+}
+
+:host ::ng-deep .p-galleria-indicator-onitem.p-galleria-indicators-bottom .p-galleria-indicators {
+    bottom: -200px !important;
+    left: 385px !important;
+    width: 100px !important;
+}
+:host ::ng-deep .p-galleria-item-container
+{
+    height: 550px !important;
+}
+@media (min-width:350px) and (max-width:1100px) {
+    .desc
+{
+   display: none !important;;
+}
+.desc-icon
+{
+    display: none !important;
+}
+:host ::ng-deep .p-galleria-item-container {
+    height: 350px !important;
+}
+}

@@ -1,0 +1,17 @@
+$color1:#635CA8;
+$color2:#38383880;
+.head
+{
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    .get-help{
+        color: $color1;
+        cursor: pointer;
+        font-weight: 700;
+    }
+    .having
+    {
+        color: $color2;
+    }
+}

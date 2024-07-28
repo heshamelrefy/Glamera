@@ -1,0 +1,171 @@
+<app-help-header/>
+<div class="">
+    <div class="row vh-100 mx-0 px-0">
+      <div class="col-md-4  position-relative p-0">
+        <p-galleria 
+    [value]="images"
+    [showItemNavigators]="false" 
+    [showThumbnails]="false" 
+    [showIndicators]="true" 
+    [showIndicatorsOnItem]="true" 
+    [responsiveOptions]="responsiveOptions" 
+    [containerStyle]="{ 'max-width': '640px','height':'100vh','position':'relative'}"
+    >
+    <ng-template pTemplate="item" let-item>
+        <img [src]="item.itemImageSrc" style="width: 100%; display: block;position: absolute; left: -30px" />
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+      <div class="grid grid-nogutter justify-content-center">
+          <img [src]="item.thumbnailImageSrc" style="display: block;" />
+      </div>
+  </ng-template>
+</p-galleria>
+        <div class="desc">
+            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            <h5 class=" m-0 mb-1">Salma Mohamed</h5>
+            <span>Founder, Soliter Salon</span>
+        </div>
+        <div class="desc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="79.999" viewBox="0 0 80 79.999">
+                <g id="Group_52" data-name="Group 52" transform="translate(-96 -528.001)">
+                  <path id="Path_77" data-name="Path 77" d="M292.455,486.239c11.923-4.832,26.017-18.925,30.8-30.847a21.64,21.64,0,0,0,1.639-7.534,21.627,21.627,0,0,0,1.64,7.534c4.786,11.922,18.969,26.06,30.847,30.847a21.639,21.639,0,0,0,7.535,1.639,21.641,21.641,0,0,0-7.535,1.64c-11.878,4.787-26.061,18.925-30.847,30.8a21.627,21.627,0,0,0-1.64,7.534,21.641,21.641,0,0,0-1.639-7.534c-4.786-11.878-18.881-26.016-30.8-30.8a21.638,21.638,0,0,0-7.534-1.64A21.636,21.636,0,0,0,292.455,486.239Z" transform="translate(-188.921 80.145)" fill="#6ac7bb"/>
+                  <g id="Group_1" data-name="Group 1" transform="translate(122 558)">
+                    <path id="Path_1" data-name="Path 1" d="M.82,20H11.364a.818.818,0,0,0,.82-.817V8.688a.818.818,0,0,0-.82-.817H6.913V.817A.819.819,0,0,0,6.092,0H3.456a.82.82,0,0,0-.778.558L.042,8.43A.809.809,0,0,0,0,8.688v10.5A.818.818,0,0,0,.82,20Zm0,0" transform="translate(15.816)" fill="#fff"/>
+                    <path id="Path_2" data-name="Path 2" d="M290.019,20h10.544a.818.818,0,0,0,.82-.817V8.688a.818.818,0,0,0-.82-.817h-4.452V.817a.819.819,0,0,0-.82-.817h-2.636a.82.82,0,0,0-.778.558L289.241,8.43a.815.815,0,0,0-.042.258v10.5A.818.818,0,0,0,290.019,20Zm0,0" transform="translate(-289.199)" fill="#fff"/>
+                  </g>
+                </g>
+              </svg>
+        </div>
+      </div>
+      <div class="col-md-7 p-0 offset-md-1 business-content">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="row w-75 mx-sm-auto mx-md-0">
+          <p class="px-0">Start your business now</p>
+          <span class="mb-4 px-0">Creating your company is just a few steps away,
+            Enter your email address to continue.</span>
+          <div class="form-group col-md-6 px-0">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" pInputText class="form-control" formControlName="firstName" placeholder="Enter your first name" >
+            <small>
+                @if (f.firstName.touched && f.firstName.invalid) {
+
+                    @if (f.firstName.errors?.['required']) {
+                        <small  >
+                            First Name is required
+                          </small>
+                    }
+                    @if (f.firstName.errors?.['pattern']) {
+                        <small  >
+                            Please enter letters only
+                          </small>
+                    }
+                }
+            </small>
+        </div>
+          <div class="form-group col-md-6 px-0">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" pInputText class="form-control" formControlName="lastName" placeholder="Enter your last name">
+            @if (f.lastName.touched && f.lastName.invalid) {
+
+                @if (f.lastName.errors?.['required']) {
+                    <small  >
+                        First Name is required
+                      </small>
+                }
+                @if (f.lastName.errors?.['pattern']) {
+                    <small  >
+                        Please enter letters only
+                      </small>
+                }
+            }
+        </div>
+          <div class="form-group col-md-6 px-0">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" pInputText class="form-control" formControlName="email" placeholder="Enter your email">
+            <small>
+                @if (f.email.touched && f.email.invalid) {
+
+                    @if (f.email.errors?.['required']) {
+    
+                        <span  >
+                            Email is required
+                          </span>
+                    }
+                    @if (f.email.errors?.['pattern']) {
+    
+                        <span  >
+                            Please enter a vaild email address
+                          </span>
+                    }
+                }
+            </small>
+           
+        </div>
+          <div class="form-group col-md-6 px-0">
+            <label for="phone">Phone Number</label>
+            <p-inputGroup>
+                <p-inputGroupAddon>
+                    <div class="d-flex gap-1 align-items-baseline px-2 phone">
+                        <app-saudi-svg/>
+                            
+                    <span style="font-size: 12px;">+966</span>
+                    </div>
+                </p-inputGroupAddon>
+                <p-inputNumber 
+                formControlName="phone"
+                [class]="f.phone.touched && f.phone.invalid ? 'ng-invalid ng-dirty':''"
+                mode="decimal" 
+                inputId="minmax"
+                [useGrouping]="false" /> 
+            
+            </p-inputGroup>
+            <small>
+                @if (f.phone.touched && f.phone.invalid) {
+                    @if (f.phone.errors?.['required']) {
+    
+                        <small  >
+                            Phone Number is required
+                          </small>
+                    }
+                    @if (f.phone.errors?.['pattern']) {
+        
+                        <small  >
+                            Please enter a valid phone number
+                          </small>
+                    }
+                }
+            </small>
+        </div>
+          <div class="col-md-12">
+            <div class="row">
+                <div class="form-group d-flex flex-column col-md-6 px-0 password">
+                    <label for="password">Password</label>
+                    <p-password [class]="f.password.touched && f.password.invalid ? 'ng-invalid ng-dirty':''"
+                      id="password" [toggleMask]="true" formControlName="password"  [feedback]="false"  placeholder="Enter your password"></p-password>
+                    @if (f.password.touched && f.password.invalid) {
+        
+                        <small  class="mt-1">
+                            Password is required
+                          </small>
+                    }
+                </div>
+              </div>
+          </div>
+          <div class="form-check col-md-6 px-0 d-flex align-it  align-items-start gap-2">
+            <p-checkbox id="terms" formControlName="terms" binary="true"></p-checkbox>
+            <label for="terms" class="terms form-check-label">
+                Agree to the 
+                <a class="text-decoration-none">Privacy Policy</a> 
+                and <br>
+                <a class="text-decoration-none">Terms & Conditions</a>
+            </label>
+          </div>
+          <div class="col-md-5 px-0 d-flex justify-content-md-end justify-content-sm-center my-sm-3">
+            <button pButton type="submit"  class="btn  btn-submit d-flex justify-content-between px-4 align-items-center gap-3">NEXT
+                <i class="pi pi-arrow-right "></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

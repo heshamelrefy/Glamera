@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+*
+{
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F6F9;
+  }
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600; /* Semi-bold */
+  }
+  
+input::placeholder {
+    font-size: 12px; 
+    color: #B7BEC9; 
+    opacity: .5 !important;  
+}
+
+// :host ::ng-deep .p-password
+// {
+//     height: 48px !important;
+// }
+:host ::ng-deep .p-password-input
+{
+    height: 48px !important;
+}
